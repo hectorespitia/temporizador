@@ -40,7 +40,12 @@ function App() {
   return (
     <div className="App">
       <p>{temporizador}</p>
-      <p><button onClick={iniciar}>{etiqueta}</button><button onClick={detener}>Detener</button><button onClick={parar}>Parar</button></p>
+      <p>
+
+        <button disabled={etiqueta==='Continuar' && empezar===true} onClick={iniciar}>{etiqueta}</button>
+        <button disabled={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)} onClick={detener}>Detener</button>
+        <button disabled={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)} onClick={parar}>Parar</button></p>
+
     </div>
   );
 }
