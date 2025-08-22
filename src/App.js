@@ -39,12 +39,12 @@ function App() {
 
   return (
     <div className="App">
-      <p>{temporizador}</p>
+      <p className='text-500 text-5xl p-8'>{temporizador}</p>
       <p>
 
-        <button disabled={etiqueta==='Continuar' && empezar===true} onClick={iniciar}>{etiqueta}</button>
-        <button disabled={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)} onClick={detener}>Detener</button>
-        <button disabled={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)} onClick={parar}>Parar</button></p>
+        <button className={etiqueta==='Continuar' && empezar===true?'text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"':'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"'} disabled={etiqueta==='Continuar' && empezar===true} onClick={iniciar}>{etiqueta}</button>
+        <button className={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)?'text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"':'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"'} disabled={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)} onClick={detener}>Detener</button>
+        <button className={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)?'text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"':'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"'} disabled={etiqueta==='Iniciar' || (etiqueta=== 'Continuar' && empezar===false)} onClick={parar}>Parar</button></p>
 
     </div>
   );
